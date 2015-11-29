@@ -1,0 +1,20 @@
+body {
+    background-color: #cce9ff;
+}
+.wrapper {
+    margin: 4% auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    background-color: #99d1ff;
+    color: #001c33;
+    border-radius: 25px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.quote {
+    width: 75%;
+    margin: 2% auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    border-radius: 10px;
+}
