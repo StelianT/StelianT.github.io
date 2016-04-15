@@ -13,9 +13,11 @@ ul {
 }
 ul li {
     background-color: #26519E;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
     text-align: center;
+}
+ul li  a div {
+    padding: 5px;
+    margin-bottom: 10px;
 }
 a {
     color: #FFFFFF;
