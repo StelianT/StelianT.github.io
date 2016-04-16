@@ -75,4 +75,10 @@ img {
 iframe {
     margin-top: 39px;
     margin-left: 40px;
+    width: 100%;
+}
+div#video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
