@@ -10,7 +10,7 @@ var app = app || {};
                             '</article>' +
                         '</section>' +
                         '<aside>' +
-                            '<img src="images/AI-person.jpg" alt="artificial intelligence and person">' +
+                            '<img src="images/AI-person-fixedBackground.jpg" alt="artificial intelligence and person">' +
                         '</aside>';
             $(selector).html(html);
         });
@@ -47,6 +47,11 @@ var app = app || {};
                 '</section>';
             $(selector).html(html);
         });
+        
+        this.get('#/links', function () {
+            var html = '<div><a href="http://www.cleverbot.com/" target="_blank">Cleverbot</a> - Chat with a bot about anything and everything - AI learns from people, in context, and imitates.</div>';
+            $(selector).html(html);
+        })
     });
 
     app.router.run('#/');

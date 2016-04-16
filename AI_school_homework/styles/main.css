@@ -26,19 +26,43 @@ ul {
     list-style-type: none;
     padding-left: 0;
     margin-right: 20px;
+    margin-top: 0;
 }
 ul li {
     background-color: #26519E;
     text-align: center;
 }
+ul li:hover {
+    background-color: #22488E;
+}
+ul li:active {
+    background-color: #1E407E;
+}
 ul li a div {
     padding: 5px;
     margin-bottom: 10px;
 }
-a {
+ul a {
     color: #FFFFFF;
     text-decoration: none;
 }
 section {
-    width: 60%;
+    float: left;
+    width: 63%;
+    text-align: justify;
+}
+article {
+    padding-left: 40px;
+}
+aside {
+    width: 32%;
+    float: right;
+}
+#wrapper {
+    float: left;
+    width: 80%;
+}
+img {
+    width: 100%;
+    height: auto;
 }
