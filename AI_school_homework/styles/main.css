@@ -51,7 +51,7 @@ section {
     width: 63%;
     text-align: justify;
 }
-section a {
+#wrapper a {
     color: #6785BB;
     text-decoration: none;
 }
@@ -81,4 +81,10 @@ div#video {
     width: 100%;
     height: auto;
     overflow: hidden;
+}
+nav div#copy {
+    font-size: 14px;
+}
+#singularity {
+    margin-top: 30px;
 }
