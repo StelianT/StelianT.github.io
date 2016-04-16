@@ -1,13 +1,29 @@
+@font-face {
+    font-family: codenameCoder;
+    src: url('../fonts/CodenameCoderFree4F-Bold.otf');
+}
+@font-face {
+    font-family: droidSans;
+    src: url('../fonts/DroidSans.ttf');
+}
 body {
     background-color: #272727;
     color: #FFFFFF;
+    font-family: droidSans, sans-serif;
+    font-size: 18px;
 }
 header {
+    font-family: codenameCoder, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+nav {
+    width: 20%;
+    float: left;
 }
 ul {
     list-style-type: none;
-    width: 20%;
-    float: left;
     padding-left: 0;
     margin-right: 20px;
 }
@@ -15,7 +31,7 @@ ul li {
     background-color: #26519E;
     text-align: center;
 }
-ul li  a div {
+ul li a div {
     padding: 5px;
     margin-bottom: 10px;
 }
