@@ -51,12 +51,18 @@ section {
     width: 63%;
     text-align: justify;
 }
+section a {
+    color: #6785BB;
+    text-decoration: none;
+}
 article {
     padding-left: 40px;
 }
 aside {
     width: 32%;
     float: right;
+    margin-right: 17px;
+    font-size: 15px;
 }
 #wrapper {
     float: left;
@@ -65,4 +71,8 @@ aside {
 img {
     width: 100%;
     height: auto;
+}
+iframe {
+    margin-top: 39px;
+    margin-left: 40px;
 }
