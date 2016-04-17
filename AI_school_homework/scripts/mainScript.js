@@ -64,8 +64,62 @@ var app = app || {};
         this.get('#/links', function () {
             var html = '<div><a href="http://www.cleverbot.com/" target="_blank">Cleverbot</a> - Chat with a bot about anything and everything - AI learns from people, in context, and imitates.</div>';
             $(selector).html(html);
+        });
+
+        this.get('#/comments', function () {
+            var html = '<div><input type="text" name="author" id="author" placeholder="Име"><br><input type="text" name="body" id="body" placeholder="Коментар"></br><button onclick="addComment()">Добави</button></div>' + '<div id="comments"></div>';
+            $.ajax({
+                url: "https://baas.kinvey.com/appdata/kid_-JFaNur4Zb/comments",
+                type: "GET",
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic c3RlbGlhbjoxMjM0");
+                },
+                success: function(data){
+                    var container = $("#comments");
+                    for (var index in data) {
+                        var text = data[index].body + ", Автор: " + data[index].author + ", Дата: " + data[index].date;
+                        container.append($("<div id='comment'>").text(text));
+                        container.append($('<br>'));
+                    }
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            });
+            $(selector).html(html);
         })
     });
 
     app.router.run('#/');
 }());
+
+function addComment() {
+    var author = $('#author').val();
+    var body = $('#body').val();
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd='0'+dd
+    }
+
+    if(mm<10) {
+        mm='0'+mm
+    }
+
+    today = mm+'/'+dd+'/'+yyyy;
+
+    $.ajax({
+        url: "https://baas.kinvey.com/appdata/kid_-JFaNur4Zb/comments",
+        type: "POST",
+        data: {"author":author,"body":body,"date":today},
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("Authorization", "Basic c3RlbGlhbjoxMjM0");
+        },
+        success: function(data){console.log(data)},
+        error: function(err){}
+    })
+}
