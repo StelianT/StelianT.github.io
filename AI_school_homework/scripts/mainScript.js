@@ -119,7 +119,10 @@ function addComment() {
         beforeSend: function(xhr) {
             xhr.setRequestHeader("Authorization", "Basic c3RlbGlhbjoxMjM0");
         },
-        success: function(data){console.log(data)},
+        success: function(data){
+            console.log(data);
+            location.reload();
+        },
         error: function(err){}
     })
 }
