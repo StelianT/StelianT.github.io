@@ -55,6 +55,9 @@ section {
     color: #6785BB;
     text-decoration: none;
 }
+#wrapper a:hover {
+    text-decoration: underline;
+}
 article {
     padding-left: 40px;
 }
@@ -89,4 +92,11 @@ nav div#copy {
     margin-top: 30px;
     margin-left: 39px;
     width: 95%;
+}
+div#form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+input {
+    margin-bottom: 10px;
 }

@@ -67,7 +67,7 @@ var app = app || {};
         });
 
         this.get('#/comments', function () {
-            var html = '<div><input type="text" name="author" id="author" placeholder="Име"><br><input type="text" name="body" id="body" placeholder="Коментар"></br><button onclick="addComment()">Добави</button></div>' + '<div id="comments"></div>';
+            var html = '<div>Споделете вашето мнение относно изкуствения интелект:</div>' + '<div id="form"><input type="text" name="author" id="author" placeholder="Име" size="45"><br><input type="text" name="body" id="body" placeholder="Коментар" size="45"></br><button onclick="addComment()">Добави</button></div>' + '<div id="comments"></div>';
             $.ajax({
                 url: "https://baas.kinvey.com/appdata/kid_-JFaNur4Zb/comments",
                 type: "GET",
